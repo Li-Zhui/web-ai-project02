@@ -1,0 +1,4 @@
+一、工程搭建
+    1.创建SpringBoot工程，并引l入web开发起步依赖、mybatis、mysql驱动、lombok。
+    2.创建数据库表dept，并在application。yml中配置数据库的基本信息。
+    3.准备基础代码结构，并引l入实体类Dept及统一的响应结果封装类Result。
