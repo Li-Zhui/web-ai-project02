@@ -18,4 +18,10 @@ public class DeptServiceImpl implements DeptService {
     public List<Dept> findAll() {
         return deptMapper.findAll();
     }
+
+    @Override
+    public void deleteById(Integer id) {
+        deptMapper.deleteById(id);
+        //dml语句执行完其实是有参数的，表示执行之后影响的记录数
+    }
 }
