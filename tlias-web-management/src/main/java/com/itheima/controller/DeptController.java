@@ -14,6 +14,8 @@ import java.util.List;
 //@Controller：表示将控制层的这个类交给IOC容器管理
 //@ResponseBody：表示将方法的返回值直接作为响应数据响应给前端。如果返回值是一个对象或集合，先会转成JSON再响应给前端。
 
+@RequestMapping("/depts")
+
 public class DeptController {
 
     @Autowired
@@ -21,7 +23,7 @@ public class DeptController {
 
     //@RequestMapping(value = "/depts", method = RequestMethod.GET)
     //method : 指定请求的方式
-    @GetMapping("/depts")
+    @GetMapping
     //代表请求方式必须为 GET
     public Result list(){
         System.out.println("查询全部部门数据");
@@ -53,7 +55,7 @@ public class DeptController {
     /**
      * 删除部门 - 方式三：如果请求参数名与形参变量名相同，直接定义方法形参即可接收。（省略aRequestParam）
      */
-    @DeleteMapping("/depts")
+    @DeleteMapping
     public Result delete(Integer id){
         System.out.println("根据ID删除部门：" + id);
         deptService.deleteById(id);
@@ -63,7 +65,7 @@ public class DeptController {
     /**
      * 新增部门
      */
-    @PostMapping("/depts")
+    @PostMapping
     public Result add(@RequestBody Dept dept){
         System.out.println("新增部门：" + dept);
         deptService.add(dept);
@@ -82,10 +84,20 @@ public class DeptController {
     /**
      * 根据ID查询部门
      */
-    @GetMapping("/depts/{id}")
+    @GetMapping("/{id}")
     public Result getTnfo(@PathVariable Integer id){
         System.out.println("根据ID查询部门：" + id);
         Dept dept = deptService.getById(id);
         return Result.success(dept);
+    }
+
+    /**
+     * 修改部门
+     */
+    @PutMapping
+    public Result update(@RequestBody Dept dept){
+        System.out.println("修改部门：" + dept);
+        deptService.update(dept);
+        return Result.success();
     }
 }
