@@ -1,0 +1,7 @@
+一、准备工作
+    1.需求分析：
+        查询所有员工信息，并查询出部门名称。(涉及到的表：emp、dept)
+    2.准备工作
+        2.1 准备数据库表 emp、emp_expr。
+        2.2 准备与表结构对应的实体类 Emp、EmpExpr。
+        2.3 准备三层架构的基本代码结构：EmpController、EmpService/EmpServiceImpl、EmpMapper。
