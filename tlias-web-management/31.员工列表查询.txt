@@ -5,3 +5,25 @@
         2.1 准备数据库表 emp、emp_expr。
         2.2 准备与表结构对应的实体类 Emp、EmpExpr。
         2.3 准备三层架构的基本代码结构：EmpController、EmpService/EmpServiceImpl、EmpMapper。
+
+
+二、分页查询——原始方式
+    1.需求分析：
+        如图
+
+    2.小结：
+        2.1 分页查询前端需要给后端传递的参数？
+            page：
+                当前页码
+            pageSize：
+                每页展示记录数
+
+        2.2 分页查询后端需要给前端返回的结果？
+            total：
+                总记录数
+            rows：
+                结果列表
+
+
+
+三、
