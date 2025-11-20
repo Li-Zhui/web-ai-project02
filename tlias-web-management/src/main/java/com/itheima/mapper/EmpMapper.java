@@ -12,18 +12,21 @@ import java.util.List;
  */
 @Mapper
 public interface EmpMapper {
-
+    // ============================= 原始方式 ==============================
     /**
      * 查询总记录数
      */
-    @Select("select count(*) from emp e left join dept d on e.dept_id = d.id")
-    Long count();
+//    @Select("select count(*) from emp e left join dept d on e.dept_id = d.id")
+//    Long count();
 
     /**
      *分页查询
      字符串字面量
      */
-    @Select("select e.*, d.name deptName from emp e left join dept d on e.dept_id = d.id " +
-            "order by e.update_time desc limit #{start},#{pageSize}")
-    public List<Emp> list(Integer start, Integer pageSize);
+//    @Select("select e.*, d.name deptName from emp e left join dept d on e.dept_id = d.id " +
+//            "order by e.update_time desc limit #{start},#{pageSize}")
+//    List<Emp> list(Integer start, Integer pageSize);
+
+    @Select("select e.*, d.name deptName from emp e left join dept d on e.dept_id = d.id order by e.update_time desc")
+    List<Emp> list();
 }
