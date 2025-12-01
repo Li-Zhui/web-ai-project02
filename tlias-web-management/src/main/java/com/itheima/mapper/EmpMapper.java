@@ -2,6 +2,7 @@ package com.itheima.mapper;
 
 import com.itheima.pojo.Emp;
 import com.itheima.pojo.EmpQueryParam;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.time.LocalDate;
@@ -38,4 +39,15 @@ public interface EmpMapper {
      *使用xml和插件的分页查询（优化）
      */
     List<Emp> list(EmpQueryParam empQueryParam);
+
+
+
+    /**
+     * 新增员工基本信息
+     */
+    @Insert("insert into emp(username, name, gender, phone, job, salary, image, entry_date," +
+            " dept_id, create_time, update_time)\n" +
+            "    values (#{username},#{name}, #{gender},#{phone}, #{job}, #{salary},#{image},#{entryDate}," +
+            "#{deptId},#{createTime},#{updateTime})")
+    void insert(Emp emp);
 }
