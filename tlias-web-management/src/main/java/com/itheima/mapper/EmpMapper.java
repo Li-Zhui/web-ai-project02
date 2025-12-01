@@ -4,6 +4,7 @@ import com.itheima.pojo.Emp;
 import com.itheima.pojo.EmpQueryParam;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -45,6 +46,8 @@ public interface EmpMapper {
     /**
      * 新增员工基本信息
      */
+    @Options(useGeneratedKeys = true, keyProperty = "id")
+    //获取到生成的主键 -- 主键返回
     @Insert("insert into emp(username, name, gender, phone, job, salary, image, entry_date," +
             " dept_id, create_time, update_time)\n" +
             "    values (#{username},#{name}, #{gender},#{phone}, #{job}, #{salary},#{image},#{entryDate}," +
