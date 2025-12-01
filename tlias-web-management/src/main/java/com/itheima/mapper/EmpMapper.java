@@ -1,6 +1,7 @@
 package com.itheima.mapper;
 
 import com.itheima.pojo.Emp;
+import com.itheima.pojo.EmpQueryParam;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.time.LocalDate;
@@ -15,15 +16,26 @@ public interface EmpMapper {
 
     /**
      *分页查询
-     字符串字面量
      */
 //    @Select("select e.*, d.name deptName from emp e left join dept d on e.dept_id = d.id " +
 //            "order by e.update_time desc limit #{start},#{pageSize}")
 //    List<Emp> list(Integer start, Integer pageSize);
 
+    /**
+     * 使用插件后的分页查询
+     */
     //@Select("select e.*, d.name deptName from emp e left join dept d on e.dept_id = d.id order by e.update_time desc")
-    List<Emp> list(String name ,
+
+    /**
+     *使用xml和插件的分页查询
+     */
+    /*List<Emp> list(String name ,
                    Integer gender,
                    LocalDate begin,
-                   LocalDate end);
+                   LocalDate end);*/
+
+    /**
+     *使用xml和插件的分页查询（优化）
+     */
+    List<Emp> list(EmpQueryParam empQueryParam);
 }

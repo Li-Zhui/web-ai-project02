@@ -7,12 +7,12 @@ import java.time.LocalDate;
 
 @Data
 public class EmpQueryParam {
-    private Integer page = 1;
-    private Integer pageSize = 10;
-    private String name;
-    private Integer gender;
+    private Integer page = 1;   //页码
+    private Integer pageSize = 10;  //每页显示记录数
+    private String name;    //姓名
+    private Integer gender; //性别
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate begin;
+    private LocalDate begin;    //入职日期
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate end;
+    private LocalDate end;  //离职日期
 }

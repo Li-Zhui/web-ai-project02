@@ -4,6 +4,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.itheima.mapper.EmpMapper;
 import com.itheima.pojo.Emp;
+import com.itheima.pojo.EmpQueryParam;
 import com.itheima.pojo.PageResult;
 import com.itheima.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,10 +41,8 @@ public class EmpServiceImpl implements EmpService {
 
     /**
      * PageHelper分页查询
-     * @param page 页码
-     * @param pageSize 每页记录数
      */
-    @Override
+    /*@Override
     public PageResult<Emp> page(Integer page,
                                 Integer pageSize,
                                 String name ,
@@ -61,8 +60,25 @@ public class EmpServiceImpl implements EmpService {
         Page<Emp> p = (Page<Emp>) empList;
         return new PageResult<Emp>(p.getTotal() , p.getResult());
 
+    }*/
+
+
+    /**
+     * PageHelper分页查询
+     */
+    @Override
+    public PageResult<Emp> page(EmpQueryParam empQueryParam) {
+        //1.设置分页参数（页码、每页记录数），需要用到这个插件中提供的PageHelper类
+        PageHelper.startPage(empQueryParam.getPage(), empQueryParam.getPageSize());
+
+        //2.执行查询
+        List<Emp> empList = empMapper.list(empQueryParam);
+
+
+        //3.解析查询结果，冰封装数据
+        Page<Emp> p = (Page<Emp>) empList;
+        return new PageResult<Emp>(p.getTotal() , p.getResult());
+
     }
-
-
 
 }

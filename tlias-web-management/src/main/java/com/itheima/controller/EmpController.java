@@ -1,6 +1,7 @@
 package com.itheima.controller;
 
 import com.itheima.pojo.Emp;
+import com.itheima.pojo.EmpQueryParam;
 import com.itheima.pojo.PageResult;
 import com.itheima.pojo.Result;
 import com.itheima.service.EmpService;
@@ -29,7 +30,7 @@ public class EmpController {
     /**
      * 分页查询
      */
-    @GetMapping
+    /*@GetMapping
     public Result page(@RequestParam(defaultValue = "1")
                             Integer page ,
                        @RequestParam(defaultValue = "10")
@@ -42,6 +43,16 @@ public class EmpController {
                            LocalDate end){
         log.info("分页查询,参数:{},{},{},{},{},{}",page,pageSize,name,gender,begin,end);
         PageResult<Emp> pageResult = empService.page(page,pageSize,name,gender,begin,end);
+        return Result.success(pageResult);
+    }*/
+
+    /**
+     * 分页查询
+     */
+    @GetMapping
+    public Result page(EmpQueryParam empQueryParam){
+        log.info("分页查询,参数:{}",empQueryParam);
+        PageResult<Emp> pageResult = empService.page(empQueryParam);
         return Result.success(pageResult);
     }
 }

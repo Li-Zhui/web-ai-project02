@@ -78,7 +78,10 @@
             指定格式（如下）
             @DateTimeFormat(pattern = "yyyy-MM-dd")
         2.3 具体用法：
-            设置在需要指定日期格式的参数前
+            设置在需要指定日期格式的日期/时间相关类型前
+
+
+
 
 
 =========================五、程序优化=========================
@@ -89,4 +92,46 @@
         1.2 优化方案：
             如果controller方法的参数较多，且未来可能继续增加，这会使得
             方法签名变得复杂难以维护，此时可以考虑将多个请求参数封装为一个对象。
-        1.3 代码实现：
+        1.3 简单参数（queryString）接收方案：
+            如果参数较少，controller方法中定义一个一个形参接收
+            如果参数较多，controller方法中定义一个对象接收
+
+    2.sql查询条件写死问题
+        2.1 问题：
+            由于sql语句需要动态的跟随着用户所输入的这些个查询的条件的变化而变化
+            所以不能将sql语句写死
+        2.2 优化方案：
+            需要用到动态sql
+
+
+
+
+=========================六、动态SQl=========================
+    1.概述（使用场景）：
+        随着用户的输入或外部条件的变化而变化的SQL语句，我们称为动态SQL。
+
+    2.Mybatis提供的标签一：<if>
+        2.1 作用：
+            判断条件是否成立，如果条件为true，则拼接SQL。
+        2.2 具体使用：
+            <if test="gender != null">
+                and e.gender = #{gender}
+            </if>
+
+    3.Mybatis提供的标签二：<where>
+        3.1 作用：
+            根据查询条件，来生成where关键字，如果所以条件不成立就不会生成where关键字。
+            并会自动去除条件前面多余的and或or。
+            （补充）即防止生成 where and name = 1; 这种一个查询条件用上and或or的情况
+        3.2 具体使用：
+            <where>
+                <if test="name != null and name != ''">
+                    e.name like concat('%',#{name},'%')
+                </if>
+                <if test="gender != null">
+                    and e.gender = #{gender}
+                </if>
+                <if test="begin != null and end != null">
+                    and e.entry_date between #{begin} and #{end}
+                </if>
+            </where> order by e.update_time desc
