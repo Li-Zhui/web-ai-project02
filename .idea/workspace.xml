@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="106.文件上传-阿里云OSS-准备工作">
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/test/java/com/itheima/OssJavaSdkQuickStart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/tlias-web-management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/34.文件上传.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/34.文件上传.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/controller/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-ai-project02.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Li-Zhui&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Li-Zhui/web-ai-project02.git&quot;,
+    &quot;accountId&quot;: &quot;c3fc48d2-7849-4650-be09-227c5dfc0508&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="D:\develop\apache-maven-3.9.4" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="D:\develop\apache-maven-3.9.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="21" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="35Bz3lnHODloe44cSqOhMZvdEaz" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.OssJavaSdkQuickStart.executor": "Run",
+    "JUnit.LogTest.testLog.executor": "Run",
+    "JUnit.TliasWebManagementApplicationTests.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.TliasWebManagementApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/code/idea/web-ai-project02",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\resources\static" />
+      <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\service" />
+      <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\service\impl" />
+      <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\mapper" />
+      <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\pojo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code\idea\web-ai-project02\tlias-web-management\tp" />
+      <recent name="D:\code\idea\web-ai-project02\tlias-web-management" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.OssJavaSdkQuickStart">
+    <configuration name="OssJavaSdkQuickStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.OssJavaSdkQuickStart" />
+      <module name="tlias-web-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TliasWebManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="tlias-web-management" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.TliasWebManagementApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.OssJavaSdkQuickStart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="" />
+      <created>1762598055813</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762598055813</updated>
+      <workItem from="1762598056765" duration="2158000" />
+      <workItem from="1762609405873" duration="2491000" />
+      <workItem from="1762650974191" duration="7603000" />
+      <workItem from="1762671423016" duration="6169000" />
+      <workItem from="1762679750706" duration="2564000" />
+      <workItem from="1762682355249" duration="165000" />
+      <workItem from="1762743268458" duration="15000" />
+      <workItem from="1762743388988" duration="2371000" />
+      <workItem from="1762748385738" duration="5947000" />
+      <workItem from="1762758908706" duration="57000" />
+      <workItem from="1762773334803" duration="27000" />
+      <workItem from="1762914168057" duration="5765000" />
+      <workItem from="1762943797029" duration="499000" />
+      <workItem from="1763013546285" duration="2877000" />
+      <workItem from="1763018218318" duration="1889000" />
+      <workItem from="1763077033255" duration="613000" />
+      <workItem from="1763286497808" duration="5182000" />
+      <workItem from="1763341244763" duration="5321000" />
+      <workItem from="1763350134958" duration="134000" />
+      <workItem from="1763350387671" duration="2011000" />
+      <workItem from="1763439973114" duration="1126000" />
+      <workItem from="1763461628767" duration="710000" />
+      <workItem from="1763470131897" duration="1085000" />
+      <workItem from="1763520497927" duration="3464000" />
+      <workItem from="1763612836092" duration="5866000" />
+      <workItem from="1763863018205" duration="104000" />
+      <workItem from="1763863131282" duration="2624000" />
+      <workItem from="1763868289957" duration="5480000" />
+      <workItem from="1763951741444" duration="3865000" />
+      <workItem from="1763960359912" duration="117000" />
+      <workItem from="1763960496887" duration="10000" />
+      <workItem from="1763967712962" duration="6727000" />
+      <workItem from="1764493695853" duration="623000" />
+      <workItem from="1764554762515" duration="6061000" />
+      <workItem from="1764572795023" duration="5683000" />
+      <workItem from="1764674863306" duration="1532000" />
+      <workItem from="1764734512240" duration="2705000" />
+      <workItem from="1764761850743" duration="2906000" />
+      <workItem from="1764803630437" duration="2262000" />
+      <workItem from="1765177430913" duration="1712000" />
+      <workItem from="1765179156883" duration="5404000" />
+      <workItem from="1765238926417" duration="2551000" />
+      <workItem from="1765241504029" duration="1435000" />
+      <workItem from="1765338670341" duration="1362000" />
+      <workItem from="1765340293832" duration="56000" />
+      <workItem from="1765340357673" duration="6336000" />
+      <workItem from="1765436880777" duration="855000" />
+      <workItem from="1765456559990" duration="1561000" />
+      <workItem from="1765458165486" duration="1299000" />
+      <workItem from="1765459476443" duration="2635000" />
+      <workItem from="1765462129369" duration="337000" />
+      <workItem from="1765462476460" duration="181000" />
+      <workItem from="1765462813447" duration="15000" />
+      <workItem from="1765804208769" duration="373000" />
+      <workItem from="1765804758775" duration="2264000" />
+      <workItem from="1765859261709" duration="1291000" />
+      <workItem from="1765951309562" duration="1608000" />
+      <workItem from="1766145567733" duration="1423000" />
+      <workItem from="1766233861724" duration="1022000" />
+      <workItem from="1766279719381" duration="4486000" />
+    </task>
+    <task id="LOCAL-00001" summary="76.准备工作-工程搭建">
+      <option name="closed" value="true" />
+      <created>1762611862330</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762611862330</updated>
+    </task>
+    <task id="LOCAL-00002" summary="77.部门管理-列表查询-接口开发">
+      <option name="closed" value="true" />
+      <created>1762654640603</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762654640603</updated>
+    </task>
+    <task id="LOCAL-00003" summary="78.部门管理-列表查询-结果封装">
+      <option name="closed" value="true" />
+      <created>1762662405403</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762662405403</updated>
+    </task>
+    <task id="LOCAL-00004" summary="79.部门管理-列表查询-前后端联调测试">
+      <option name="closed" value="true" />
+      <created>1762677245227</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762677245227</updated>
+    </task>
+    <task id="LOCAL-00005" summary="80.部门管理-删除部门-接口开发">
+      <option name="closed" value="true" />
+      <created>1762682307802</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762682307802</updated>
+    </task>
+    <task id="LOCAL-00006" summary="81.部门管理-新增部门-接口开发">
+      <option name="closed" value="true" />
+      <created>1762745754605</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762745754605</updated>
+    </task>
+    <task id="LOCAL-00007" summary="82.部门管理-修改部门-查询回显">
+      <option name="closed" value="true" />
+      <created>1762756837357</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762756837357</updated>
+    </task>
+    <task id="LOCAL-00008" summary="83.部门管理-修改部门-修改数据">
+      <option name="closed" value="true" />
+      <created>1762758937372</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762758937372</updated>
+    </task>
+    <task id="LOCAL-00009" summary="85.日志技术-Logback配置文件&amp;日志级别">
+      <option name="closed" value="true" />
+      <created>1762920638875</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1762920638875</updated>
+    </task>
+    <task id="LOCAL-00010" summary="87.多表关系-一对一&amp;多对多">
+      <option name="closed" value="true" />
+      <created>1763077642366</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1763077642366</updated>
+    </task>
+    <task id="LOCAL-00011" summary="91.多表查询-子查询">
+      <option name="closed" value="true" />
+      <created>1763300681526</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1763300681526</updated>
+    </task>
+    <task id="LOCAL-00012" summary="92.多表查询-案例">
+      <option name="closed" value="true" />
+      <created>1763350026639</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1763350026639</updated>
+    </task>
+    <task id="LOCAL-00013" summary="93.员工管理-准备工作">
+      <option name="closed" value="true" />
+      <created>1763355365076</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1763355365076</updated>
+    </task>
+    <task id="LOCAL-00014" summary="94.员工管理-分页查询-原理分析">
+      <option name="closed" value="true" />
+      <created>1763473223502</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1763473223502</updated>
+    </task>
+    <task id="LOCAL-00015" summary="95.员工管理-分页查询-代码实现">
+      <option name="closed" value="true" />
+      <created>1763523962618</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1763523962618</updated>
+    </task>
+    <task id="LOCAL-00016" summary="96.员工管理-分页查询-PageHelper&#10;分页插件">
+      <option name="closed" value="true" />
+      <created>1763623418009</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1763623418009</updated>
+    </task>
+    <task id="LOCAL-00017" summary="96.员工管理-分页查询-PageHelper&#10;分页插件">
+      <option name="closed" value="true" />
+      <created>1763956476361</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1763956476361</updated>
+    </task>
+    <task id="LOCAL-00018" summary="96.员工管理-分页查询-PageHelper&#10;分页插件">
+      <option name="closed" value="true" />
+      <created>1763956550410</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1763956550410</updated>
+    </task>
+    <task id="LOCAL-00019" summary="97.员工管理-条件分页查询-基本实现">
+      <option name="closed" value="true" />
+      <created>1763956654123</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1763956654123</updated>
+    </task>
+    <task id="LOCAL-00020" summary="格式优化">
+      <option name="closed" value="true" />
+      <created>1763960283046</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1763960283046</updated>
+    </task>
+    <task id="LOCAL-00021" summary="修改之前@DateTimeFormat用法文本描述错误">
+      <option name="closed" value="true" />
+      <created>1763971145312</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1763971145312</updated>
+    </task>
+    <task id="LOCAL-00022" summary="98.员工管理-条件分页查询-程序优化">
+      <option name="closed" value="true" />
+      <created>1764556547416</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1764556547416</updated>
+    </task>
+    <task id="LOCAL-00023" summary="99.员工管理-新增员工-保存员工基本信息">
+      <option name="closed" value="true" />
+      <created>1764562990830</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1764562990830</updated>
+    </task>
+    <task id="LOCAL-00024" summary="100.员工管理-新增员工-批量保存员工工作经历">
+      <option name="closed" value="true" />
+      <created>1764586022895</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1764586022895</updated>
+    </task>
+    <task id="LOCAL-00025" summary="101.事务管理-介绍与操作">
+      <option name="closed" value="true" />
+      <created>1764735068907</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1764735068907</updated>
+    </task>
+    <task id="LOCAL-00026" summary="102.事务管理-Spring事务管理-介绍">
+      <option name="closed" value="true" />
+      <created>1764737219700</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1764737219700</updated>
+    </task>
+    <task id="LOCAL-00027" summary="103.事务管理-Spring事务管理-进阶&amp;事务四大特性">
+      <option name="closed" value="true" />
+      <created>1764805400256</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1764805400256</updated>
+    </task>
+    <task id="LOCAL-00028" summary="103.事务管理-Spring事务管理-进阶&amp;事务四大特性">
+      <option name="closed" value="true" />
+      <created>1764805587336</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1764805587336</updated>
+    </task>
+    <task id="LOCAL-00029" summary="103.事务管理-Spring事务管理-进阶&amp;事务四大特性">
+      <option name="closed" value="true" />
+      <created>1764805766806</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1764805766806</updated>
+    </task>
+    <task id="LOCAL-00030" summary="104.文件上传-介绍">
+      <option name="closed" value="true" />
+      <created>1765200821971</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1765200821971</updated>
+    </task>
+    <task id="LOCAL-00031" summary="105.文件上传-本地存储">
+      <option name="closed" value="true" />
+      <created>1765241415261</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1765241415261</updated>
+    </task>
+    <task id="LOCAL-00032" summary="106.文件上传-阿里云OSS-准备工作">
+      <option name="closed" value="true" />
+      <created>1765439427203</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1765439427203</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="web-ai-project02/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="79.部门管理-列表查询-前后端联调测试" />
+    <MESSAGE value="80.部门管理-删除部门-接口开发" />
+    <MESSAGE value="81.部门管理-新增部门-接口开发" />
+    <MESSAGE value="82.部门管理-修改部门-查询回显" />
+    <MESSAGE value="83.部门管理-修改部门-修改数据" />
+    <MESSAGE value="85.日志技术-Logback配置文件&amp;日志级别" />
+    <MESSAGE value="87.多表关系-一对一&amp;多对多" />
+    <MESSAGE value="91.多表查询-子查询" />
+    <MESSAGE value="92.多表查询-案例" />
+    <MESSAGE value="93.员工管理-准备工作" />
+    <MESSAGE value="94.员工管理-分页查询-原理分析" />
+    <MESSAGE value="95.员工管理-分页查询-代码实现" />
+    <MESSAGE value="96.员工管理-分页查询-PageHelper&#10;分页插件" />
+    <MESSAGE value="97.员工管理-条件分页查询-基本实现" />
+    <MESSAGE value="格式优化" />
+    <MESSAGE value="修改之前@DateTimeFormat用法文本描述错误" />
+    <MESSAGE value="98.员工管理-条件分页查询-程序优化" />
+    <MESSAGE value="99.员工管理-新增员工-保存员工基本信息" />
+    <MESSAGE value="100.员工管理-新增员工-批量保存员工工作经历" />
+    <MESSAGE value="101.事务管理-介绍与操作" />
+    <MESSAGE value="102.事务管理-Spring事务管理-介绍" />
+    <MESSAGE value="103.事务管理-Spring事务管理-进阶&amp;事务四大特性" />
+    <MESSAGE value="104.文件上传-介绍" />
+    <MESSAGE value="105.文件上传-本地存储" />
+    <MESSAGE value="106.文件上传-阿里云OSS-准备工作" />
+    <option name="LAST_COMMIT_MESSAGE" value="106.文件上传-阿里云OSS-准备工作" />
+  </component>
+</project>
