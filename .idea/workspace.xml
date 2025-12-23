@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="106.文件上传-阿里云OSS-准备工作">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/test/java/com/itheima/OssJavaSdkQuickStart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/tlias-web-management.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="107.文件上传-阿里云OSS-入门程序">
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/utils/AliyunOSSOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tlias-web-management/34.文件上传.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/34.文件上传.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-ai-project02.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,9 +87,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.TliasWebManagementApplication.executor": "Run",
+    "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/code/idea/web-ai-project02",
+    "last_opened_file_path": "D:/code/idea/web-ai-project02/tlias-web-management/src/main/java/com/itheima/utils",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -125,31 +110,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\utils" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\resources\static" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\service" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\service\impl" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\mapper" />
-      <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\pojo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\tp" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OssJavaSdkQuickStart">
-    <configuration name="OssJavaSdkQuickStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itheima.OssJavaSdkQuickStart" />
-      <module name="tlias-web-management" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itheima.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="TliasWebManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="tlias-web-management" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.TliasWebManagementApplication" />
@@ -157,11 +129,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.OssJavaSdkQuickStart" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -237,7 +204,8 @@
       <workItem from="1765951309562" duration="1608000" />
       <workItem from="1766145567733" duration="1423000" />
       <workItem from="1766233861724" duration="1022000" />
-      <workItem from="1766279719381" duration="4486000" />
+      <workItem from="1766279719381" duration="7820000" />
+      <workItem from="1766480990274" duration="4095000" />
     </task>
     <task id="LOCAL-00001" summary="76.准备工作-工程搭建">
       <option name="closed" value="true" />
@@ -495,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765439427203</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="107.文件上传-阿里云OSS-入门程序">
+      <option name="closed" value="true" />
+      <created>1766285332251</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1766285332251</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="79.部门管理-列表查询-前后端联调测试" />
     <MESSAGE value="80.部门管理-删除部门-接口开发" />
     <MESSAGE value="81.部门管理-新增部门-接口开发" />
     <MESSAGE value="82.部门管理-修改部门-查询回显" />
@@ -550,6 +525,7 @@
     <MESSAGE value="104.文件上传-介绍" />
     <MESSAGE value="105.文件上传-本地存储" />
     <MESSAGE value="106.文件上传-阿里云OSS-准备工作" />
-    <option name="LAST_COMMIT_MESSAGE" value="106.文件上传-阿里云OSS-准备工作" />
+    <MESSAGE value="107.文件上传-阿里云OSS-入门程序" />
+    <option name="LAST_COMMIT_MESSAGE" value="107.文件上传-阿里云OSS-入门程序" />
   </component>
 </project>
