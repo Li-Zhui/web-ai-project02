@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="108.文件上传-阿里云OSS-案例集成">
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/utils/AliyunOSSProperties.java" afterDir="false" />
+    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="109.文件上传-阿里云OSS-程序优化(@Value&amp;@ConfigurationProperties)">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/35.删除员工.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/tp/35——一-3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/34.文件上传.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/34.文件上传.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/utils/AliyunOSSOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/utils/AliyunOSSOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/utils/AliyunOSSOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/utils/AliyunOSSOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/controller/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/controller/EmpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/mapper/EmpExprMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/mapper/EmpExprMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/mapper/EmpMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/mapper/EmpMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/service/EmpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/service/EmpService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/service/impl/EmpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/service/impl/EmpServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/resources/com/itheima/mapper/EmpExprMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/resources/com/itheima/mapper/EmpExprMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/resources/com/itheima/mapper/EmpMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/resources/com/itheima/mapper/EmpMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +94,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.TliasWebManagementApplication.executor": "Run",
     "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "main",
@@ -102,7 +108,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.editor",
+    "settings.editor.selected.configurable": "database.query.execution",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -208,7 +214,12 @@
       <workItem from="1766145567733" duration="1423000" />
       <workItem from="1766233861724" duration="1022000" />
       <workItem from="1766279719381" duration="7820000" />
-      <workItem from="1766480990274" duration="7729000" />
+      <workItem from="1766480990274" duration="8057000" />
+      <workItem from="1766542862530" duration="596000" />
+      <workItem from="1766579006912" duration="5049000" />
+      <workItem from="1766584893425" duration="339000" />
+      <workItem from="1766587324763" duration="691000" />
+      <workItem from="1766621588644" duration="2565000" />
     </task>
     <task id="LOCAL-00001" summary="76.准备工作-工程搭建">
       <option name="closed" value="true" />
@@ -482,7 +493,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766489628186</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="109.文件上传-阿里云OSS-程序优化(@Value&amp;@ConfigurationProperties)">
+      <option name="closed" value="true" />
+      <created>1766499262044</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1766499262044</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +531,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="81.部门管理-新增部门-接口开发" />
     <MESSAGE value="82.部门管理-修改部门-查询回显" />
     <MESSAGE value="83.部门管理-修改部门-修改数据" />
     <MESSAGE value="85.日志技术-Logback配置文件&amp;日志级别" />
@@ -537,6 +555,7 @@
     <MESSAGE value="106.文件上传-阿里云OSS-准备工作" />
     <MESSAGE value="107.文件上传-阿里云OSS-入门程序" />
     <MESSAGE value="108.文件上传-阿里云OSS-案例集成" />
-    <option name="LAST_COMMIT_MESSAGE" value="108.文件上传-阿里云OSS-案例集成" />
+    <MESSAGE value="109.文件上传-阿里云OSS-程序优化(@Value&amp;@ConfigurationProperties)" />
+    <option name="LAST_COMMIT_MESSAGE" value="109.文件上传-阿里云OSS-程序优化(@Value&amp;@ConfigurationProperties)" />
   </component>
 </project>

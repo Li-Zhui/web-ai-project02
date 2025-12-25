@@ -2,11 +2,11 @@ package com.itheima.mapper;
 
 import com.itheima.pojo.Emp;
 import com.itheima.pojo.EmpQueryParam;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 
-import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -53,4 +53,9 @@ public interface EmpMapper {
             "    values (#{username},#{name}, #{gender},#{phone}, #{job}, #{salary},#{image},#{entryDate}," +
             "#{deptId},#{createTime},#{updateTime})")
     void insert(Emp emp);
+
+    /**
+     * 批量删除员工
+     */
+    void deleteByIds(List<Integer> ids);
 }
