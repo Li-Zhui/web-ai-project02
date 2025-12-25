@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="112.员工管理-修改员工-查询回显">
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/tp/36——一-3.1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/tp/36——一-3.2.png" afterDir="false" />
+    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="113.员工管理-修改员工-修改数据">
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/37.全局异常处理器.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tlias-web-management/36.修改员工.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/36.修改员工.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/controller/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/controller/EmpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/mapper/EmpExprMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/mapper/EmpExprMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/mapper/EmpMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/mapper/EmpMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/service/EmpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/service/EmpService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/service/impl/EmpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/service/impl/EmpServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/resources/com/itheima/mapper/EmpExprMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/resources/com/itheima/mapper/EmpExprMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/resources/com/itheima/mapper/EmpMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/resources/com/itheima/mapper/EmpMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +213,7 @@
       <workItem from="1766587324763" duration="691000" />
       <workItem from="1766621588644" duration="3920000" />
       <workItem from="1766647514342" duration="20000" />
-      <workItem from="1766647707873" duration="5445000" />
+      <workItem from="1766647707873" duration="7916000" />
     </task>
     <task id="LOCAL-00001" summary="76.准备工作-工程搭建">
       <option name="closed" value="true" />
@@ -518,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766650558612</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="113.员工管理-修改员工-修改数据">
+      <option name="closed" value="true" />
+      <created>1766653797420</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1766653797420</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="85.日志技术-Logback配置文件&amp;日志级别" />
     <MESSAGE value="87.多表关系-一对一&amp;多对多" />
     <MESSAGE value="91.多表查询-子查询" />
     <MESSAGE value="92.多表查询-案例" />
@@ -573,6 +573,7 @@
     <MESSAGE value="109.文件上传-阿里云OSS-程序优化(@Value&amp;@ConfigurationProperties)" />
     <MESSAGE value="111.员工管理-删除员工-逻辑实现" />
     <MESSAGE value="112.员工管理-修改员工-查询回显" />
-    <option name="LAST_COMMIT_MESSAGE" value="112.员工管理-修改员工-查询回显" />
+    <MESSAGE value="113.员工管理-修改员工-修改数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="113.员工管理-修改员工-修改数据" />
   </component>
 </project>
