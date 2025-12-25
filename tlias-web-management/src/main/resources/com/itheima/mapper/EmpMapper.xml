@@ -3,6 +3,26 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.itheima.mapper.EmpMapper">
+
+    <!--根据ID更新员工基本信息-->
+    <update id="updateById">
+        UPDATE emp
+        SET
+            username = #{username},
+            password = #{password},
+            name = #{name},
+            gender = #{gender},
+            phone = #{phone},
+            job = #{job},
+            salary = #{salary},
+            image = #{image},
+            entry_date = #{entryDate},
+            dept_id = #{deptId},
+            update_time = Now()
+        WHERE id =  #{id}
+    </update>
+
+
     <!--批量删除员工的基本信息 （1，2，3）-->
     <delete id="deleteByIds">
         delete from emp where id in

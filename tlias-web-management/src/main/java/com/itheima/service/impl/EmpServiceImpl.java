@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -127,13 +128,36 @@ public class EmpServiceImpl implements EmpService {
         empMapper.deleteByIds(ids);
 
         //2.删除员工工作经历信息
-        empExprMapper.deleteExprByIds(ids);
+        empExprMapper.deleteByEmpIds(ids);
     }
 
-    //查询员工信息
+    /**
+     * 查询员工
+     */
     @Override
     public Emp getInfo(Integer id) {
        return empMapper.getById(id);
+    }
+
+    /**
+     * 修改员工
+     */
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void update(Emp emp) {
+        //1.根据id修改员工的基本信息
+        emp.setUpdateTime(LocalDateTime.now());
+        empMapper.updateById(emp);
+
+        //2.根据ID批量修改员工工作经历
+            //2.1 先根据ID删除原有的工作经历
+        empExprMapper.deleteByEmpIds(Arrays.asList(emp.getId()));
+            //2.2 再添加新的工作经历
+        List<EmpExpr> exprList = emp.getExprList();
+        if(!CollectionUtils.isEmpty(exprList)){
+            exprList.forEach(empExpr -> empExpr.setEmpId(emp.getId()));
+            empExprMapper.insertBatch(exprList);
+        }
     }
 
 }
