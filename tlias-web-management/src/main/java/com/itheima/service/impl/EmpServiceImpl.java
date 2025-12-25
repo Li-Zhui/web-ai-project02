@@ -130,4 +130,10 @@ public class EmpServiceImpl implements EmpService {
         empExprMapper.deleteExprByIds(ids);
     }
 
+    //查询员工信息
+    @Override
+    public Emp getInfo(Integer id) {
+       return empMapper.getById(id);
+    }
+
 }

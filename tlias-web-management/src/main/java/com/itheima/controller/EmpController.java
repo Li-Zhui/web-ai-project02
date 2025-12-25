@@ -88,5 +88,15 @@ public class EmpController {
         return Result.success();
     }
 
+    /**
+     * 查询员工
+     */
+    @GetMapping("/{id}")
+    public Result getInfo(@PathVariable Integer id){
+        log.info("查询员工,参数:{}", id);
+        Emp emp = empService.getInfo(id);
+        return Result.success(emp);
+    }
+
 
 }

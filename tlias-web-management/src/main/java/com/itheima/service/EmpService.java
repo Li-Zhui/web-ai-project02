@@ -29,6 +29,14 @@ public interface EmpService {
      */
     void save(Emp emp);
 
+    /**
+     * 删除员工
+     */
     void delete(List<Integer> ids);
+
+    /**
+     * 员工查询
+     */
+    Emp getInfo(Integer id);
 }
 
