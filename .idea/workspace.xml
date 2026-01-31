@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="113.员工管理-修改员工-修改数据">
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/37.全局异常处理器.txt" afterDir="false" />
+    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="114.员工管理-修改员工-程序优化（动态更新）">
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/36.修改员工.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/36.修改员工.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/resources/com/itheima/mapper/EmpMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/resources/com/itheima/mapper/EmpMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/37.全局异常处理器.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/37.全局异常处理器.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/controller/EmpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/controller/EmpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpExprMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpExprMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpExprMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpExprMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/EmpService.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/EmpService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/impl/EmpServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/impl/EmpServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +219,19 @@
       <workItem from="1766587324763" duration="691000" />
       <workItem from="1766621588644" duration="3920000" />
       <workItem from="1766647514342" duration="20000" />
-      <workItem from="1766647707873" duration="7916000" />
+      <workItem from="1766647707873" duration="7944000" />
+      <workItem from="1766660270604" duration="2072000" />
+      <workItem from="1766665709182" duration="636000" />
+      <workItem from="1766716359663" duration="594000" />
+      <workItem from="1766836842475" duration="2690000" />
+      <workItem from="1766883499632" duration="597000" />
+      <workItem from="1767341053688" duration="233000" />
+      <workItem from="1767341491067" duration="2201000" />
+      <workItem from="1768802247359" duration="5000" />
+      <workItem from="1769748453114" duration="607000" />
+      <workItem from="1769822199154" duration="34000" />
+      <workItem from="1769822240760" duration="1347000" />
+      <workItem from="1769846331532" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="76.准备工作-工程搭建">
       <option name="closed" value="true" />
@@ -519,7 +537,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766653797420</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="114.员工管理-修改员工-程序优化（动态更新）">
+      <option name="closed" value="true" />
+      <created>1766655668914</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1766655668914</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,7 +575,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="87.多表关系-一对一&amp;多对多" />
     <MESSAGE value="91.多表查询-子查询" />
     <MESSAGE value="92.多表查询-案例" />
     <MESSAGE value="93.员工管理-准备工作" />
@@ -574,6 +599,7 @@
     <MESSAGE value="111.员工管理-删除员工-逻辑实现" />
     <MESSAGE value="112.员工管理-修改员工-查询回显" />
     <MESSAGE value="113.员工管理-修改员工-修改数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="113.员工管理-修改员工-修改数据" />
+    <MESSAGE value="114.员工管理-修改员工-程序优化（动态更新）" />
+    <option name="LAST_COMMIT_MESSAGE" value="114.员工管理-修改员工-程序优化（动态更新）" />
   </component>
 </project>
