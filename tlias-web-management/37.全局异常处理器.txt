@@ -13,3 +13,7 @@
         2.2.4 方法形参类型为想要捕获的异常类型（Exception）
         2.2.5 在方法中记录异常的错误日志（log.error("全局异常处理器，拦截到异常"，e);）
         2.2.6 响应错误结果并在error方法中传递错误的提示信息（return Result.error("对不起，服务器异常，请稍后重试");）
+
+    2.3 如何定义一个全局异常处理器？
+        @RestControllerAdvice = @ControllerAdvice + @ResponseBody
+        @ExceptionHandler
