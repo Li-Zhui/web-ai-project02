@@ -4,10 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="120.登录认证-登录功能-实现">
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/40.登录认证-登录功能-实现.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/41.登录认证-登录校验-会话技术.txt" afterDir="false" />
+    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="124.登录认证-登录校验-会话技术-令牌方案">
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/42.登录认证-登录校验-Filter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/filter/DemoFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/filter/TokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/utils/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/test/java/com/itheima/JwtTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/40.登录认证-登录功能-实现.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/40.登录认证-登录功能-实现.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/41.登录认证-登录校验-会话技术.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/41.登录认证-登录校验-会话技术.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/40.登录认证-登录功能-实现.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/TliasWebManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/TliasWebManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/service/impl/EmpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/service/impl/EmpServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/TliasWebManagementApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/TliasWebManagementApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/controller/ReportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/controller/ReportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/mapper/EmpMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/pojo/Emp.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/pojo/Emp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/EmpService.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/EmpService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/ReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/ReportService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/impl/EmpServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/impl/EmpServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/impl/ReportServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/service/impl/ReportServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,41 +94,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.OssJavaSdkQuickStart.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LogTest.testLog.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TliasWebManagementApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.TliasWebManagementApplication.executor&quot;: &quot;Run&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/code/idea/web-ai-project02/tlias-web-management/src/main/java/com/itheima/utils&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.OssJavaSdkQuickStart.executor": "Run",
+    "JUnit.JwtTest.testGenerateJwt.executor": "Run",
+    "JUnit.JwtTest.testParseJwt.executor": "Run",
+    "JUnit.LogTest.testLog.executor": "Run",
+    "JUnit.TliasWebManagementApplicationTests.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.TliasWebManagementApplication.executor": "Run",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/code/idea/web-ai-project02/tlias-web-management/src/main/java/com/itheima/utils",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\utils" />
@@ -121,7 +144,39 @@
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.TliasWebManagementApplication">
+    <configuration name="JwtTest.testGenerateJwt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tlias-web-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itheima" />
+      <option name="MAIN_CLASS_NAME" value="com.itheima.JwtTest" />
+      <option name="METHOD_NAME" value="testGenerateJwt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JwtTest.testParseJwt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tlias-web-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itheima" />
+      <option name="MAIN_CLASS_NAME" value="com.itheima.JwtTest" />
+      <option name="METHOD_NAME" value="testParseJwt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TliasWebManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="tlias-web-management" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.TliasWebManagementApplication" />
@@ -129,6 +184,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JwtTest.testParseJwt" />
+        <item itemvalue="JUnit.JwtTest.testGenerateJwt" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -230,7 +291,11 @@
       <workItem from="1770602726473" duration="1018000" />
       <workItem from="1770704169742" duration="21000" />
       <workItem from="1770799979582" duration="3351000" />
-      <workItem from="1770857695563" duration="10137000" />
+      <workItem from="1770857695563" duration="10169000" />
+      <workItem from="1770902332980" duration="621000" />
+      <workItem from="1770944780352" duration="1671000" />
+      <workItem from="1770947847247" duration="809000" />
+      <workItem from="1770948692733" duration="17766000" />
     </task>
     <task id="LOCAL-00001" summary="76.准备工作-工程搭建">
       <option name="closed" value="true" />
@@ -576,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770816962886</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="124.登录认证-登录校验-会话技术-令牌方案">
+      <option name="closed" value="true" />
+      <created>1770901971015</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1770901971015</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="94.员工管理-分页查询-原理分析" />
     <MESSAGE value="95.员工管理-分页查询-代码实现" />
     <MESSAGE value="96.员工管理-分页查询-PageHelper&#10;分页插件" />
     <MESSAGE value="97.员工管理-条件分页查询-基本实现" />
@@ -631,6 +703,7 @@
     <MESSAGE value="115.全局异常处理器" />
     <MESSAGE value="117.员工信息统计-职位统计-实现" />
     <MESSAGE value="120.登录认证-登录功能-实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="120.登录认证-登录功能-实现" />
+    <MESSAGE value="124.登录认证-登录校验-会话技术-令牌方案" />
+    <option name="LAST_COMMIT_MESSAGE" value="124.登录认证-登录校验-会话技术-令牌方案" />
   </component>
 </project>
