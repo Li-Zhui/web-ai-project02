@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
 @Component
-@Aspect //标识当前为一个切面类
+//@Aspect //标识当前为一个切面类
 @Slf4j
 public class RecordTimeAspect {
 

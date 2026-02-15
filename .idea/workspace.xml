@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="132.登录认证-登录校验-Interceptor-详解">
-      <change afterPath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/java/com/itheima/aop/RecordTimeAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/44.SpringAOP-基础.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="134.SpringAOP-基础-核心概念">
+      <change afterPath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/java/com/itheima/anno/LogOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/java/com/itheima/aop/MyAspect1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/java/com/itheima/aop/MyAspect2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/java/com/itheima/aop/MyAspect3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/java/com/itheima/aop/MyAspect4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/java/com/itheima/aop/MyAspects5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tlias-web-management/45.SpringAOP-进阶.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/filter/TokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/filter/TokenFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/interceptor/TokenInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/target/classes/com/itheima/interceptor/TokenInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/java/com/itheima/aop/RecordTimeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/java/com/itheima/aop/RecordTimeAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/java/com/itheima/service/impl/DeptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/java/com/itheima/service/impl/DeptServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/44.SpringAOP-基础.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/44.SpringAOP-基础.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -99,7 +103,7 @@
     "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/code/idea/web-ai-project02/tlias-web-management/src/main/java/com/itheima/utils",
+    "last_opened_file_path": "D:/code/idea/web-ai-project02/springboot-aop-quickstart/src/main/java/com/itheima/aop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -119,18 +123,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\idea\web-ai-project02\springboot-aop-quickstart\src\main\java\com\itheima\aop" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\utils" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\resources\static" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\service" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\service\impl" />
-      <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\mapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\tp" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.JwtTest.testGenerateJwt">
     <configuration name="JwtTest.testGenerateJwt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tlias-web-management" />
       <extension name="coverage">
@@ -292,7 +296,8 @@
       <workItem from="1771028384408" duration="292000" />
       <workItem from="1771028687896" duration="7379000" />
       <workItem from="1771040494721" duration="6000" />
-      <workItem from="1771050337748" duration="5821000" />
+      <workItem from="1771050337748" duration="5947000" />
+      <workItem from="1771129459025" duration="8637000" />
     </task>
     <task id="LOCAL-00001" summary="76.准备工作-工程搭建">
       <option name="closed" value="true" />
@@ -662,7 +667,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771039746950</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="134.SpringAOP-基础-核心概念">
+      <option name="closed" value="true" />
+      <created>1771074150465</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1771074150465</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,7 +705,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="97.员工管理-条件分页查询-基本实现" />
     <MESSAGE value="格式优化" />
     <MESSAGE value="修改之前@DateTimeFormat用法文本描述错误" />
     <MESSAGE value="98.员工管理-条件分页查询-程序优化" />
@@ -717,6 +729,7 @@
     <MESSAGE value="124.登录认证-登录校验-会话技术-令牌方案" />
     <MESSAGE value="129.登录认证-登录校验-Filter-详解" />
     <MESSAGE value="132.登录认证-登录校验-Interceptor-详解" />
-    <option name="LAST_COMMIT_MESSAGE" value="132.登录认证-登录校验-Interceptor-详解" />
+    <MESSAGE value="134.SpringAOP-基础-核心概念" />
+    <option name="LAST_COMMIT_MESSAGE" value="134.SpringAOP-基础-核心概念" />
   </component>
 </project>
