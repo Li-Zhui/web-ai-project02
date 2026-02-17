@@ -1,0 +1,205 @@
+=======================================一、配置优先级============================================
+1.配置：
+    SpringBoot中支持三种格式的配置文件：
+        1.1 application.properties
+                server.port=8081
+
+        1.2 application.yml
+                server:
+                port: 8082
+
+        1.3 application.yaml
+                server:
+                port: 8083
+2.如上面所示，在多个不同格式配置了同一属性，优先级问题
+        命令行参数 > Java系统属性 >
+        properties > yml > yaml
+
+
+
+3.注意：
+    虽然springboot支持多种格式配置文件，但是在项目开发时，推荐统一使用一种格式的配置
+    （yml是主流）。
+
+
+
+4.SpringBoot除了支持配置文件属性配置，还支持Java系统属性和命令行参数的方式进行属性配置。
+
+    4.1 Java系统属性（-D）
+        -Dserver.port=9000
+
+    4.2 命令行参数（--）
+        --server.port=10010
+
+    4.3 运行jar包时如何指定这俩
+        ①. 执行maven打包指令package
+            tlias-web-management-0.0.1-SNAPSHOT.jar
+        ②. 执行java指令，运行jar包
+            java （指定Java系统属性） -jar tlias-web-management-0.0.1-SNAPSH0T.jar （指定命令行参数）
+            例如：
+            java -Dserver.port=9000-jar tlias-web-management-0.0.1-SNAPSHOT.iar --server.port=10010
+
+    4.4 注意：
+        Springboot项目进行打包时，需要引入插件 spring-boot-maven-plugin（基于官网骨架创建项目，会自动添加该插件）
+
+
+
+
+
+
+=======================================二、Bean管理============================================
+1.Bean的作用域
+
+    1.1 Spring支持五种作用域，后三种在web环境才生效：
+
+        作用域                       说明
+        singleton       容器内同名称的bean 只有一个实例（单例）（默认）
+
+        prototype       每次使用该bean时会创建新的实例（非单例/多例）
+
+        request         每个请求范围内会创建新的实例（web环境中，了解）
+
+        session         每个会话范围内会创建新的实例（web环境中，了解）
+
+        application     每个应用范围内会创建新的实例（web环境中，了解）
+
+    1.2 怎么设置
+        在声明这个Bean的时候，在类上加 @Scope("作用域") 这个注解
+
+        @RestController底层封装@Controller
+        @Controller底层封装@Conponent
+        @Component就是用来声明Bean的
+
+    1.3 延迟创建
+        默认单例的Bean在项目启动时创建，创建完毕后将该Bean保存在IOC容器中。
+
+        延迟：
+            在Bean对象对应类上加上 @Lazy
+            会延迟到第一此使用时再来创建这个Bean
+
+    1.4 应用场景：
+        单例（绝大部分的Bean）：
+            如果声明时这个Bean是无状态的Bean就可以设置为单例
+        多例：
+            如果有状态就可以设置为多例
+        判断对象有无状态：
+            只需要判断这个对象中保不保存数据
+
+
+
+2.第三方Bean
+
+    2.1 问题
+        如果要管理的bean对象来自于第三方（不是自定义的），是无法用 @Component
+        及衍生注解声明bean的（一般无法修改）。
+
+    2.2 解决（这种方式不推荐，因为要尽量保持启动类职责单一）
+        a.在启动类（一般专门设置一个 @Configuration 配置类管理第三方Bean对象）中定义一个方法，返回值类型为第三方类。
+        b.在这个方法中 new 一个第三方类的对象，然后将这个对象返回。
+        c.通过 @Bean注解 将方法返回值交给Bean容器管理，成为IOC容器中的Bean对象。
+
+    2.3 注意：
+        2.3.1 如果第三方bean需要依赖其它bean对象，直接在bean定义方法中设置形参即可，
+              容器会根据类型自动将需要的Bean对象注入形参。
+
+        2.3.2 通过@Bean注解的name或value属性可以声明bean的名称，如果不指定，
+              默认bean的名称就是方法名。
+
+    2.4 小结
+        什么时候使用@Component声明bean，什么时候使用@Bean注解?
+            一般如果是项目中自定义的类，使用@component及其衍生注解
+            如果是引入第三方依赖中的类，使用@Bean注解
+
+
+
+
+
+
+=======================================三、SpringBoot原理============================================
+1.起步依赖原理
+    1.1 什么是SpringBoot
+        原始的 Spring 框架比较繁琐，主要体现两方面：
+            pom文件引入依赖
+            项目的配置
+
+        通过SpringBoot可以快速构建一个Spring应用
+
+    1.2 可以快速构建的原因：
+        a.起步依赖
+        b.自动配置
+
+    1.3 起步依赖的原理：
+        Maven的依赖传递
+
+
+
+2.自动配置的原理
+    2.1 什么是自动配置的原理：
+        SpringBoot的自动配置就是当spring项目启动后，一些配置类、bean对象就自动存入到了IOC容器中，
+        不需要我们手动去声明，从而简化了开发，省去了繁琐的配置操作。
+
+    2.2 自动配置实现方案一：@Component + @ComponentScan
+
+        2.2.1 方案说明：
+            a.导入的配置类上加上@Conponent或其衍生注解。
+            b.通过@ComponentScan手动扫描
+
+        2.2.2 为什么不能默认扫描：
+            启动类组件具备组件扫描功能，但是默认扫描的是启动类所在包及其子包。
+            配置类所在包无法扫到配置类的包，因此这种方法声明的Bean对象无法生效。
+
+        2.2.3 解决——手动扫描：
+            在启动类上加 @ComponentScan(backPackages = {"包名1" , "包名2" , ...}) 注解，
+            来设置扫描范围。
+
+        2.2.4 注意：
+            一旦手动扫描，默认扫描的启动类所在包就不生效了，必须手动加上当前类。
+
+        2.2.5 方案缺陷：
+            a.使用繁琐：
+                一旦将来配置类多了，需要手动一个个指定需要扫描的包。
+            b.性能低：
+                扫描的范围过大
+
+    2.3 自动配置实现方案二：@Import导入
+
+        2.3.1 方案说明：
+            @Import(类名.class)导入的类会被Spring加载到Ioc容器中，导入形式主要有以下几种：
+                a.导入普通类（不需要实现接口，基础类，加注解）
+                b.导入配置类（ @Configuration 声明的类），这个配置类中声明的Bean对象也会导入IOC容器中
+                c.导入ImportSelector接口实现类
+                    这个实现类实现的 selectImport方法 的返回的 String[] 数组中的所有类
+                    都会一次性导入到IOC容器中。
+
+        2.3.2 注意：
+            一般第三方会将@import注解封装到提供的自定义注解中
+            使用第三方依赖时，就不需要考虑导入哪些类，只需要加上此注解即可。
+
+
+
+3.自动配置-源码跟踪
+
+    3.1 @SpringBootApplication注解
+
+        3.1.1 作用：
+            该注解标识在SpringBoot工程引l导类上，是SpringBoot中最最最重要的注解。该注解由三个部分组成：
+
+                a.@SpringBootConfiguration：
+                    该注解与@Configuration注解作用相同，用来声明当前也是一个配置类。
+
+                b.@ComponentScan：
+                    组件扫描，默认扫描当前引l导类所在包及其子包。
+
+                c.@EnableAutoConfiguration：
+                    SpringBoot实现自动化配置的核心注解。
+                （其底层封装导入ImportSelector接口实现类的 @Import ）
+
+        3.1.2 SpringBoot自动配置实现：
+            a.SpringBoot项目将自动配置的配置文件加载出来并封装在一个List集合中
+            b.然后转化为一个 String[] 数组，再给到ImportSelector接口实现类中返回
+            c.最后通过 @Import 导入到IOC容器
+
+        3.1.3 注意：
+            在低版本(2.7.0以前)的springboot中，自动配置类(XxxAutoConfiguration)是
+            定义在spring.factories文件中。
+            在3.0之后这份文件就废弃了，自动配置类就定义在AutoConfiguration.imports这份文件中。

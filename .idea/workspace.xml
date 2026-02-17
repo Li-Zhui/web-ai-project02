@@ -4,22 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="134.SpringAOP-基础-核心概念">
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/46.SpringAOP-案例.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/anno/Log.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/aop/OperationLogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/mapper/OperateLogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/pojo/OperateLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/utils/CurrentHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tlias-web-management/src/test/java/com/itheima/ThreadLocalTest.java" afterDir="false" />
+    <list default="true" id="c206c25d-4fdc-4539-8e7d-abb833edaa56" name="Changes" comment="140.SpringAOP-案例-获取当前登录员工">
+      <change afterPath="$PROJECT_DIR$/itheima-utils/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/itheima-utils/src/main/java/com/example/EnableHeaderConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/itheima-utils/src/main/java/com/example/HeaderConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/itheima-utils/src/main/java/com/example/HeaderGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/itheima-utils/src/main/java/com/example/HeaderParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/itheima-utils/src/main/java/com/example/MyImportSelector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/itheima-utils/src/main/java/com/example/TokenParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-web-config/47.SpringBoot-原理篇.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-web-config/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-web-config/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94dad3c8-ff28-4c17-8f9a-6e4f02767484.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/94dad3c8-ff28-4c17-8f9a-6e4f02767484.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/controller/DeptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/filter/TokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/src/main/java/com/itheima/filter/TokenFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +94,9 @@
     "JUnit.JwtTest.testGenerateJwt.executor": "Run",
     "JUnit.JwtTest.testParseJwt.executor": "Run",
     "JUnit.LogTest.testLog.executor": "Run",
+    "JUnit.SpringbootWebTests.textScope.executor": "Run",
     "JUnit.TliasWebManagementApplicationTests.executor": "Run",
+    "Maven.springboot-web-config [package].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -103,11 +106,12 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.SpringbootAopQuickstartApplication.executor": "Run",
+    "Spring Boot.SpringbootWebConfigApplication.executor": "Run",
     "Spring Boot.TliasWebManagementApplication.executor": "Run",
     "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/code/idea/web-ai-project02/tlias-web-management/src/main/java/com/itheima/utils",
+    "last_opened_file_path": "D:/code/idea/web-ai-project02",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,6 +120,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
@@ -127,11 +132,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\idea\web-ai-project02" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\utils" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\test\java\com\itheima" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\aop" />
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\mapper" />
-      <recent name="D:\code\idea\web-ai-project02\tlias-web-management\src\main\java\com\itheima\pojo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\code\idea\web-ai-project02\tlias-web-management\tp" />
@@ -141,7 +146,28 @@
       <recent name="com.itheima.anno" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JwtTest.testGenerateJwt">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="SpringbootWebConfigApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.SpringbootWebTests.textScope">
     <configuration name="JwtTest.testGenerateJwt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tlias-web-management" />
       <extension name="coverage">
@@ -174,9 +200,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringbootWebTests.textScope" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-web-config" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itheima" />
+      <option name="MAIN_CLASS_NAME" value="com.itheima.SpringbootWebTests" />
+      <option name="METHOD_NAME" value="textScope" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringbootAopQuickstartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="springboot-aop-quickstart" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.SpringbootAopQuickstartApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootWebConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="springboot-web-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.SpringbootWebConfigApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -190,6 +239,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpringbootWebTests.textScope" />
         <item itemvalue="JUnit.JwtTest.testParseJwt" />
         <item itemvalue="JUnit.JwtTest.testGenerateJwt" />
       </list>
@@ -306,7 +356,10 @@
       <workItem from="1771050337748" duration="5947000" />
       <workItem from="1771129459025" duration="8637000" />
       <workItem from="1771200664978" duration="2425000" />
-      <workItem from="1771209435378" duration="6828000" />
+      <workItem from="1771209435378" duration="7751000" />
+      <workItem from="1771247145967" duration="2000" />
+      <workItem from="1771249851955" duration="20000" />
+      <workItem from="1771291780434" duration="19832000" />
     </task>
     <task id="LOCAL-00001" summary="76.准备工作-工程搭建">
       <option name="closed" value="true" />
@@ -684,7 +737,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771074150465</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="140.SpringAOP-案例-获取当前登录员工">
+      <option name="closed" value="true" />
+      <created>1771241050055</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1771241050055</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +775,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="格式优化" />
     <MESSAGE value="修改之前@DateTimeFormat用法文本描述错误" />
     <MESSAGE value="98.员工管理-条件分页查询-程序优化" />
     <MESSAGE value="99.员工管理-新增员工-保存员工基本信息" />
@@ -739,6 +799,7 @@
     <MESSAGE value="129.登录认证-登录校验-Filter-详解" />
     <MESSAGE value="132.登录认证-登录校验-Interceptor-详解" />
     <MESSAGE value="134.SpringAOP-基础-核心概念" />
-    <option name="LAST_COMMIT_MESSAGE" value="134.SpringAOP-基础-核心概念" />
+    <MESSAGE value="140.SpringAOP-案例-获取当前登录员工" />
+    <option name="LAST_COMMIT_MESSAGE" value="140.SpringAOP-案例-获取当前登录员工" />
   </component>
 </project>
