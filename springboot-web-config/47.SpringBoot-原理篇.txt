@@ -203,3 +203,89 @@
             在低版本(2.7.0以前)的springboot中，自动配置类(XxxAutoConfiguration)是
             定义在spring.factories文件中。
             在3.0之后这份文件就废弃了，自动配置类就定义在AutoConfiguration.imports这份文件中。
+
+
+
+4.自动配置-@Conditional
+    4.1 作用：
+        按照一定的条件进行判断，在满足给定条件后才会注册对应的bean对象到SpringIoc容器中。
+
+    4.2 位置：
+        方法、类
+
+    4.3 @Conditional 本身是一个父注解，派生出大量的子注解：
+
+            @Conditionalonclass：
+                判断环境中是否有对应字节码文件，才注册bean到Ioc容器。
+
+            @ConditionalonMissingBean：
+                判断环境中没有对应的bean（类型或名称），才注册bean到Ioc容器。
+
+            @ConditionalonProperty：
+                判断配置文件（.yml .yaml .properties）中有对应属性和值，才注册bean到Ioc容器。
+
+5. 自己定义自动配置类的核心是什么？如何完成自动配置？
+
+  a.定义自动配置类
+
+  b.将自动配置类配置在META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports文件中
+        只要将类配置在这个文件中时，接下来当SpringBoot项目启动时就会自动加载这个文件，
+        并且将这份文件配置的所有自动配置类的全类名读取到List集合中，
+        最后才能将这份文件声明的Bean加入到IOC容器中
+
+
+
+
+
+
+
+=======================================四、自定义Starter============================================
+1.什么是Starter
+    指我们在SpringBoot项目开发过程中，我们所引入进来的一个个依赖。
+
+
+
+2.Starter包括：
+     2.1 依赖管理功能（将当前功能开发时相关依赖都集成进来）：
+            starter结尾的文件
+     2.2 自动配置功能：
+            autoconfigure结尾的文件
+
+
+
+2.自定义Starter使用场景：
+    在实际开发中，经常会定义一些公共组件，提供给各个项目团队使用。而在SpringBoot的项目中，
+    一般会将这些公共组件封装为SpringBoot的 starter（包含了起步依赖和自动配置的功能）。
+
+
+
+3.Starter命名规范：
+    3.1 SpringBoot官方提供的：
+            spring-boot在前
+    3.2 其它技术提供：
+            对应 功能模块/组件名称 在前
+
+
+
+4.依赖引入：
+    只需要引入starter依赖就可以，
+    因为其他依赖都会通过依赖传递直接传递到项目中。
+
+
+
+5.案例
+    5.1 需求：
+        自定义aliyun-oss-spring-boot-starter，完成阿里云oss操作工具类
+        AliyunOSSOperator 的自动配置。
+
+    5.2 目标：
+        引入起步依赖引入之后，要想使用阿里云OSS，注入
+        AliyunOSSOperator直接使用即可。
+
+    5.3 步骤：
+        a.创建aliyun-oss-spring-boot-starter模块
+
+        b.创建aliyun-oss-spring-boot-autoconfigure模块，在starter中引l入该模块
+
+        c.在aliyun-oss-spring-boot-autoconfigure模块中的定义自动配置功能，
+          并定义自动配置文件 META-INF/spring/xxxx。imports
